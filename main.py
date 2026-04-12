@@ -41,7 +41,7 @@ async def set_cookie(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # 🔹 función para hacer request (separada para evitar bloqueos)
 def hacer_request(data, headers):
-    return requests.post(url, json=data, headers=headers, timeout=10)
+    return requests.post(url, json=data, headers=headers, timeout=30)
 
 
 # 🔹 /cc → procesa tarjetas
