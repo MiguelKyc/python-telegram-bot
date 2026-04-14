@@ -10,7 +10,7 @@ user_cookies = {}
 
 #Toma el token de railway
 TOKEN = os.getenv("TOKEN")
-
+print("TOKEN:", TOKEN) 
 # Regex para validar formato de tarjeta (16|2|4|3)
 cc_regex = re.compile(r"^\d{16}\|\d{2}\|\d{4}\|\d{3}$")
 
