@@ -1,4 +1,4 @@
-import re
+5import re
 import requests
 import asyncio
 import os
@@ -9,6 +9,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 user_cookies = {}
 
 #Toma el token de railway
+TOKEN = os.getenv("TOKEN")
 
 # Regex para validar formato de tarjeta (16|2|4|3)
 cc_regex = re.compile(r"^\d{16}\|\d{2}\|\d{4}\|\d{3}$")
@@ -137,7 +138,7 @@ async def unknown(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 # 🔹 iniciar bot
-app = ApplicationBuilder().token("8272202025:AAEB5TuIQRLFktfl1Uj3gV7q8r30TCMWf-I").build()
+app = ApplicationBuilder().token("TOKEN").build()
 
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("cookie", set_cookie))
