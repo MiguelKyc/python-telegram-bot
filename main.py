@@ -137,8 +137,7 @@ async def unknown(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 # 🔹 iniciar bot
-app = ApplicationBuilder().token("8272202025:AAFyj7rZ6xJFID7zSy6HOe3mnLTuNc86wtl
-").build()
+app = ApplicationBuilder().token("8272202025:AAEB5TuIQRLFktfl1Uj3gV7q8r30TCMWf-I").build()
 
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("cookie", set_cookie))
